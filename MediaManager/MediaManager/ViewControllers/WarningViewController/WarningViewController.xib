@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WarningViewController" customModule="MediaManager" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="LrP-3Y-kuS" id="ztB-JO-AM0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="warningLabel" destination="1Tu-AL-pZk" id="N0R-CX-fSf"/>
+                <outlet property="warningView" destination="OXb-uc-cvZ" id="yTf-7E-kZk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-uc-cvZ" userLabel="Warning View">
+                    <rect key="frame" x="32.5" y="253.5" width="310" height="160"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHD-wW-Qel">
+                            <rect key="frame" x="127.5" y="18" width="55" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warning" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tu-AL-pZk">
+                            <rect key="frame" x="123.5" y="70" width="63.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrP-3Y-kuS">
+                            <rect key="frame" x="115" y="110" width="80" height="30"/>
+                            <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="sfV-og-Ozs"/>
+                            </constraints>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="1" green="0.47058823529999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="yUt-iu-ifu"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrZ-07-eQ1">
+                            <rect key="frame" x="60" y="44" width="190.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0012021996080000001" green="0.1305446327" blue="0.25096264480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="LrP-3Y-kuS" firstAttribute="centerX" secondItem="OXb-uc-cvZ" secondAttribute="centerX" id="5c5-8A-dpp"/>
+                        <constraint firstItem="1Tu-AL-pZk" firstAttribute="top" secondItem="QrZ-07-eQ1" secondAttribute="bottom" constant="5" id="Kfu-tF-9yY"/>
+                        <constraint firstAttribute="bottom" secondItem="LrP-3Y-kuS" secondAttribute="bottom" constant="20" id="Ra4-EW-5VB"/>
+                        <constraint firstItem="1Tu-AL-pZk" firstAttribute="centerY" secondItem="OXb-uc-cvZ" secondAttribute="centerY" id="UuI-fD-kxC"/>
+                        <constraint firstItem="QrZ-07-eQ1" firstAttribute="top" secondItem="xHD-wW-Qel" secondAttribute="bottom" constant="5" id="fZp-Hn-fQR"/>
+                        <constraint firstItem="QrZ-07-eQ1" firstAttribute="centerX" secondItem="OXb-uc-cvZ" secondAttribute="centerX" id="lDK-Gu-n8Q"/>
+                        <constraint firstAttribute="width" constant="310" id="sfp-VJ-N4l"/>
+                        <constraint firstItem="xHD-wW-Qel" firstAttribute="centerX" secondItem="OXb-uc-cvZ" secondAttribute="centerX" id="tUo-FR-of8"/>
+                        <constraint firstItem="1Tu-AL-pZk" firstAttribute="centerX" secondItem="OXb-uc-cvZ" secondAttribute="centerX" id="vCL-SU-FFz"/>
+                        <constraint firstAttribute="height" constant="160" id="xbG-Qz-mgu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.25069563356164382" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="OXb-uc-cvZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RWS-k6-gyo"/>
+                <constraint firstItem="OXb-uc-cvZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Zh5-9Z-29f"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="104"/>
+        </view>
+    </objects>
+</document>

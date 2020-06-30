@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="Note" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rk-DC-dq1">
+                        <rect key="frame" x="210" y="10" width="80" height="80"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="dq8-Ne-Vs1"/>
+                            <constraint firstAttribute="width" constant="80" id="pbg-5F-akH"/>
+                        </constraints>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="trash" catalog="system">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteNote:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tCn-4y-xmV"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRS-CQ-Fja">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrt-0c-Vis">
+                                <rect key="frame" x="10" y="9.9999999999999982" width="56" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oA-cK-KgL">
+                                <rect key="frame" x="254" y="10" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1H-BU-O04">
+                                <rect key="frame" x="10" y="69" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vrt-0c-Vis" firstAttribute="leading" secondItem="JRS-CQ-Fja" secondAttribute="leading" constant="10" id="43b-c5-j0S"/>
+                            <constraint firstItem="Vrt-0c-Vis" firstAttribute="top" secondItem="JRS-CQ-Fja" secondAttribute="top" constant="10" id="9d4-5y-ED2"/>
+                            <constraint firstItem="8oA-cK-KgL" firstAttribute="top" secondItem="JRS-CQ-Fja" secondAttribute="top" constant="10" id="LoZ-3E-NwV"/>
+                            <constraint firstAttribute="bottom" secondItem="e1H-BU-O04" secondAttribute="bottom" constant="10" id="Rdi-LQ-3gb"/>
+                            <constraint firstAttribute="trailing" secondItem="8oA-cK-KgL" secondAttribute="trailing" constant="10" id="iXU-mj-vnl"/>
+                            <constraint firstItem="e1H-BU-O04" firstAttribute="leading" secondItem="JRS-CQ-Fja" secondAttribute="leading" constant="10" id="rCE-pH-O3v"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JRS-CQ-Fja" secondAttribute="trailing" id="0CY-hW-PuP"/>
+                    <constraint firstItem="JRS-CQ-Fja" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5mP-Wf-YC1"/>
+                    <constraint firstItem="8rk-DC-dq1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ByK-ms-cb6"/>
+                    <constraint firstAttribute="trailing" secondItem="8rk-DC-dq1" secondAttribute="trailing" constant="10" id="Cq5-eQ-ueL"/>
+                    <constraint firstAttribute="bottom" secondItem="JRS-CQ-Fja" secondAttribute="bottom" id="Hrk-jp-6IM"/>
+                    <constraint firstItem="JRS-CQ-Fja" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I9Z-US-cxo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bodyLabel" destination="e1H-BU-O04" id="HwA-Vd-1Hm"/>
+                <outlet property="dataLabel" destination="8oA-cK-KgL" id="zkH-64-V6t"/>
+                <outlet property="headerLabel" destination="Vrt-0c-Vis" id="jYZ-82-Vlx"/>
+                <outlet property="swipableView" destination="JRS-CQ-Fja" id="4eI-jW-ayL"/>
+                <outlet property="viewTarailing" destination="0CY-hW-PuP" id="CG3-bt-TcN"/>
+            </connections>
+            <point key="canvasLocation" x="123.18840579710145" y="143.47826086956522"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="trash" catalog="system" width="60" height="64"/>
+    </resources>
+</document>

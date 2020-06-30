@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeleteFileViewController" customModule="MediaManager" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="THq-F3-oE2" id="t7e-JE-pmq"/>
+                <outlet property="cancelButton" destination="ACl-Nn-8oB" id="15w-XV-flK"/>
+                <outlet property="deleteButton" destination="Aod-gg-2Xv" id="uHs-CY-52l"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THq-F3-oE2" userLabel="Alert View">
+                    <rect key="frame" x="87.5" y="273.5" width="200" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li7-UB-dev">
+                            <rect key="frame" x="20" y="20" width="160" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-gg-2Xv">
+                            <rect key="frame" x="120" y="70" width="60" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.47058823529999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="0AQ-zB-MBI"/>
+                            </constraints>
+                            <state key="normal" title="Delete">
+                                <color key="titleColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="deleteAction:" destination="-1" eventType="touchUpInside" id="RfQ-2i-x5s"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACl-Nn-8oB">
+                            <rect key="frame" x="20" y="70" width="60" height="30"/>
+                            <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="0ig-dX-MdA"/>
+                            </constraints>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="1" green="0.47058823529999999" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="oCk-mX-6d8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0012021996080000001" green="0.1305446327" blue="0.25096264480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Aod-gg-2Xv" secondAttribute="bottom" constant="20" id="1fB-Mg-Zfo"/>
+                        <constraint firstItem="ACl-Nn-8oB" firstAttribute="leading" secondItem="THq-F3-oE2" secondAttribute="leading" constant="20" id="4mV-4Q-HR2"/>
+                        <constraint firstAttribute="width" constant="200" id="8aJ-eD-tum"/>
+                        <constraint firstAttribute="bottom" secondItem="ACl-Nn-8oB" secondAttribute="bottom" constant="20" id="Oed-LU-PWw"/>
+                        <constraint firstItem="Li7-UB-dev" firstAttribute="top" secondItem="THq-F3-oE2" secondAttribute="top" constant="20" id="euh-Xe-9ru"/>
+                        <constraint firstAttribute="trailing" secondItem="Aod-gg-2Xv" secondAttribute="trailing" constant="20" id="gBg-ew-nqK"/>
+                        <constraint firstAttribute="height" constant="120" id="huu-Zc-Nsc"/>
+                        <constraint firstItem="Li7-UB-dev" firstAttribute="leading" secondItem="THq-F3-oE2" secondAttribute="leading" constant="20" id="ja1-OE-hkm"/>
+                        <constraint firstAttribute="trailing" secondItem="Li7-UB-dev" secondAttribute="trailing" constant="20" id="kYT-tn-0Z7"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.2479398544520548" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="THq-F3-oE2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tny-Qo-dE3"/>
+                <constraint firstItem="THq-F3-oE2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oj2-gB-tbh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="129"/>
+        </view>
+    </objects>
+</document>

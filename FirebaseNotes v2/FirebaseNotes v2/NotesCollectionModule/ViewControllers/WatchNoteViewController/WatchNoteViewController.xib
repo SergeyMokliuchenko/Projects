@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WatchNoteViewController" customModule="FirebaseNotes_v2" customModuleProvider="target">
+            <connections>
+                <outlet property="bodyLabel" destination="d1m-6H-bnT" id="E8g-qz-4B1"/>
+                <outlet property="someImageView" destination="jmZ-4G-Hcd" id="Obx-Rg-vKf"/>
+                <outlet property="titleLabel" destination="L4Z-cJ-9B1" id="X9N-Oa-WR3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPz-dL-sCp">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Note" id="p9D-kg-0Ea">
+                            <barButtonItem key="leftBarButtonItem" title="Cancel" image="arrow.uturn.left" catalog="system" id="N59-Zs-y3u">
+                                <connections>
+                                    <action selector="cancelAction:" destination="-1" id="NIG-Nf-Tk8"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Update" image="text.badge.plus" catalog="system" id="7t1-gW-yOX">
+                                <connections>
+                                    <action selector="updateAction:" destination="-1" id="ROl-O1-mSI"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmZ-4G-Hcd">
+                    <rect key="frame" x="20" y="156.66666666666663" width="374" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="1ZJ-wK-KJ0"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4Z-cJ-9B1">
+                    <rect key="frame" x="20" y="63.999999999999993" width="374" height="28.666666666666664"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1m-6H-bnT">
+                    <rect key="frame" x="20" y="112.66666666666667" width="374" height="24.000000000000014"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jmZ-4G-Hcd" firstAttribute="top" secondItem="d1m-6H-bnT" secondAttribute="bottom" constant="20" id="2hR-a6-dYE"/>
+                <constraint firstItem="d1m-6H-bnT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3tc-vV-scG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jmZ-4G-Hcd" secondAttribute="trailing" constant="20" id="6eU-GP-33a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L4Z-cJ-9B1" secondAttribute="trailing" constant="20" id="GV8-s0-dX4"/>
+                <constraint firstItem="jPz-dL-sCp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="YEI-XZ-V51"/>
+                <constraint firstItem="L4Z-cJ-9B1" firstAttribute="top" secondItem="jPz-dL-sCp" secondAttribute="bottom" constant="20" id="cnP-W1-B3b"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d1m-6H-bnT" secondAttribute="trailing" constant="20" id="dLf-FB-9YQ"/>
+                <constraint firstItem="L4Z-cJ-9B1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dZh-XH-2w6"/>
+                <constraint firstItem="jmZ-4G-Hcd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="e3l-YH-Xz7"/>
+                <constraint firstItem="d1m-6H-bnT" firstAttribute="top" secondItem="L4Z-cJ-9B1" secondAttribute="bottom" constant="20" id="m1p-VP-Sby"/>
+                <constraint firstItem="jPz-dL-sCp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rM9-Pb-WgE"/>
+                <constraint firstItem="jPz-dL-sCp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wVl-SR-BE7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="107.60869565217392"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.uturn.left" catalog="system" width="128" height="112"/>
+        <image name="text.badge.plus" catalog="system" width="128" height="109"/>
+    </resources>
+</document>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="MediaManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8H-le-f2M" userLabel="Delete Button">
+                        <rect key="frame" x="240" y="5" width="80" height="80"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="doZ-2r-bYV"/>
+                            <constraint firstAttribute="width" constant="80" id="iEi-Um-Hbj"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="trash" catalog="system"/>
+                        <connections>
+                            <action selector="deleteFileAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="K9V-c3-Qs8"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Aq-6h-Lgj" userLabel="Swipable View">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Play_button" translatesAutoresizingMaskIntoConstraints="NO" id="49O-hj-eM9" userLabel="Cover Image View">
+                                <rect key="frame" x="10" y="15" width="70" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="nOd-sX-yV8"/>
+                                    <constraint firstAttribute="height" constant="60" id="yO3-zp-kC8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO3-YY-ihW" userLabel="Track Name Label">
+                                <rect key="frame" x="90" y="10" width="220" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rs-Pj-hLt" userLabel="Artist Name Label">
+                                <rect key="frame" x="90" y="44" width="220" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Rs-Pj-hLt" firstAttribute="leading" secondItem="49O-hj-eM9" secondAttribute="trailing" constant="10" id="6dI-iA-qmD"/>
+                            <constraint firstItem="hO3-YY-ihW" firstAttribute="leading" secondItem="49O-hj-eM9" secondAttribute="trailing" constant="10" id="ESI-kq-j78"/>
+                            <constraint firstAttribute="trailing" secondItem="hO3-YY-ihW" secondAttribute="trailing" constant="10" id="bLh-AN-Bef"/>
+                            <constraint firstAttribute="trailing" secondItem="5Rs-Pj-hLt" secondAttribute="trailing" constant="10" id="j9T-AZ-sOM"/>
+                            <constraint firstItem="49O-hj-eM9" firstAttribute="leading" secondItem="0Aq-6h-Lgj" secondAttribute="leading" constant="10" id="lD2-mg-e7b"/>
+                            <constraint firstItem="5Rs-Pj-hLt" firstAttribute="top" secondItem="hO3-YY-ihW" secondAttribute="bottom" constant="10" id="uMs-c2-eBN"/>
+                            <constraint firstItem="hO3-YY-ihW" firstAttribute="top" secondItem="0Aq-6h-Lgj" secondAttribute="top" constant="10" id="vXQ-PL-vjw"/>
+                            <constraint firstItem="49O-hj-eM9" firstAttribute="centerY" secondItem="0Aq-6h-Lgj" secondAttribute="centerY" id="y9j-48-aN9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="0.75358518835616439" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="l8H-le-f2M" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GpF-ko-hSC"/>
+                    <constraint firstAttribute="bottom" secondItem="0Aq-6h-Lgj" secondAttribute="bottom" id="KrF-Uy-2zx"/>
+                    <constraint firstAttribute="trailing" secondItem="0Aq-6h-Lgj" secondAttribute="trailing" id="UHs-Jn-eeH"/>
+                    <constraint firstItem="0Aq-6h-Lgj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fqF-ef-Rn9"/>
+                    <constraint firstItem="0Aq-6h-Lgj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kwV-f8-m7s"/>
+                    <constraint firstAttribute="trailing" secondItem="l8H-le-f2M" secondAttribute="trailing" id="yar-dJ-pbH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="5Rs-Pj-hLt" id="BnJ-Uv-haH"/>
+                <outlet property="coverImageView" destination="49O-hj-eM9" id="Fdy-I5-mID"/>
+                <outlet property="swipableView" destination="0Aq-6h-Lgj" id="wiW-lW-sj0"/>
+                <outlet property="swipableViewTrailingConstraint" destination="UHs-Jn-eeH" id="Uh9-UD-iUU"/>
+                <outlet property="trackNameLabel" destination="hO3-YY-ihW" id="XiW-Lj-zId"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="143.97321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Play_button" width="68" height="68"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+    </resources>
+</document>

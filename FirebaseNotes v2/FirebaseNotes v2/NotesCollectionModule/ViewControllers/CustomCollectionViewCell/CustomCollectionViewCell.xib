@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCollectionViewCell" id="gTV-IL-0wX" customClass="CustomCollectionViewCell" customModule="FirebaseNotes_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="164" height="62"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="164" height="62"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmH-Zm-IPP" userLabel="Delete">
+                        <rect key="frame" x="104" y="0.0" width="60" height="62"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="J6X-gK-euy"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" image="trash" catalog="system"/>
+                        <connections>
+                            <action selector="deleteAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="c7z-01-Pbf"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZzB-3j-W02" userLabel="Swipable View">
+                        <rect key="frame" x="0.0" y="0.0" width="164" height="62"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbi-JL-0h8">
+                                <rect key="frame" x="10" y="10" width="144" height="24"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfk-qd-Qcu">
+                                <rect key="frame" x="131" y="44" width="23" height="8"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wbi-JL-0h8" firstAttribute="top" secondItem="ZzB-3j-W02" secondAttribute="top" constant="10" id="M3X-us-AOI"/>
+                            <constraint firstAttribute="trailing" secondItem="Wbi-JL-0h8" secondAttribute="trailing" constant="10" id="Qjc-vk-7Ko"/>
+                            <constraint firstAttribute="bottom" secondItem="Xfk-qd-Qcu" secondAttribute="bottom" constant="10" id="Wws-YZ-YlZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Xfk-qd-Qcu" secondAttribute="trailing" constant="10" id="b0A-um-9k8"/>
+                            <constraint firstItem="Wbi-JL-0h8" firstAttribute="leading" secondItem="ZzB-3j-W02" secondAttribute="leading" constant="10" id="c1e-Ib-Ehh"/>
+                            <constraint firstItem="Xfk-qd-Qcu" firstAttribute="top" secondItem="Wbi-JL-0h8" secondAttribute="bottom" constant="10" id="rKV-M1-5IB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LmH-Zm-IPP" secondAttribute="trailing" id="031-l2-dsj"/>
+                <constraint firstItem="LmH-Zm-IPP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="60K-rs-S9B"/>
+                <constraint firstAttribute="trailing" secondItem="ZzB-3j-W02" secondAttribute="trailing" id="BTK-Pb-HSl"/>
+                <constraint firstAttribute="bottom" secondItem="ZzB-3j-W02" secondAttribute="bottom" id="PFD-zX-Vaw"/>
+                <constraint firstItem="LmH-Zm-IPP" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ULj-36-Ymg"/>
+                <constraint firstItem="ZzB-3j-W02" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bAm-Jw-Oaz"/>
+                <constraint firstAttribute="bottom" secondItem="LmH-Zm-IPP" secondAttribute="bottom" id="hjd-El-GHn"/>
+                <constraint firstItem="ZzB-3j-W02" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="v0P-Md-vON"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="164" height="62"/>
+            <connections>
+                <outlet property="dateLabel" destination="Xfk-qd-Qcu" id="Y7o-rR-IV7"/>
+                <outlet property="swipableView" destination="ZzB-3j-W02" id="PYB-Ml-Sxz"/>
+                <outlet property="titleLabel" destination="Wbi-JL-0h8" id="yxb-Vm-Xno"/>
+                <outlet property="viewTarailing" destination="BTK-Pb-HSl" id="amC-3d-7y9"/>
+            </connections>
+            <point key="canvasLocation" x="50.724637681159422" y="16.071428571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="trash" catalog="system" width="121" height="128"/>
+    </resources>
+</document>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddMarkerViewController" customModule="Favourite_places" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionTextField" destination="OaX-XX-xnY" id="dxw-s1-YIe"/>
+                <outlet property="starRating" destination="FML-ZA-pV3" id="oIt-p8-8R4"/>
+                <outlet property="titleTextField" destination="xqR-ol-XtQ" id="fuU-kE-flX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6C-ki-axH">
+                    <rect key="frame" x="81.666666666666686" y="260.66666666666669" width="251" height="215"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new marker with params?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-09-Bei">
+                            <rect key="frame" x="10" y="10" width="231" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please type title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqR-ol-XtQ">
+                            <rect key="frame" x="20" y="81" width="211" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please type description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OaX-XX-xnY">
+                            <rect key="frame" x="20" y="125" width="211" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLy-FJ-zA5">
+                            <rect key="frame" x="183" y="175" width="48" height="30"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="yZR-y8-tOT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouV-tl-zy6">
+                            <rect key="frame" x="20" y="175" width="80" height="30"/>
+                            <state key="normal" title="Add marker"/>
+                            <connections>
+                                <action selector="addPlaceAction:" destination="-1" eventType="touchUpInside" id="F2U-qV-JHd"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FML-ZA-pV3" customClass="SwiftyStarRatingView" customModule="SwiftyStarRatingView">
+                            <rect key="frame" x="20" y="41" width="211" height="30"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="DgZ-Y7-9cB"/>
+                                <constraint firstAttribute="width" constant="211" id="eyx-iK-BkR"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="accurateHalfStars" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="pLy-FJ-zA5" secondAttribute="trailing" constant="20" id="165-zZ-1mV"/>
+                        <constraint firstItem="OaX-XX-xnY" firstAttribute="leading" secondItem="M6C-ki-axH" secondAttribute="leading" constant="20" id="24O-48-JFW"/>
+                        <constraint firstItem="FML-ZA-pV3" firstAttribute="top" secondItem="Ykc-09-Bei" secondAttribute="bottom" constant="10" id="2Ci-bg-Abc"/>
+                        <constraint firstItem="ouV-tl-zy6" firstAttribute="leading" secondItem="M6C-ki-axH" secondAttribute="leading" constant="20" id="2mC-L0-yeF"/>
+                        <constraint firstItem="ouV-tl-zy6" firstAttribute="top" secondItem="OaX-XX-xnY" secondAttribute="bottom" constant="16" id="81i-cj-nh5"/>
+                        <constraint firstItem="xqR-ol-XtQ" firstAttribute="leading" secondItem="M6C-ki-axH" secondAttribute="leading" constant="20" id="8BZ-on-bYX"/>
+                        <constraint firstAttribute="trailing" secondItem="OaX-XX-xnY" secondAttribute="trailing" constant="20" id="9C0-3x-f1P"/>
+                        <constraint firstAttribute="trailing" secondItem="Ykc-09-Bei" secondAttribute="trailing" constant="10" id="CWO-zv-JIh"/>
+                        <constraint firstItem="OaX-XX-xnY" firstAttribute="top" secondItem="xqR-ol-XtQ" secondAttribute="bottom" constant="10" id="I7Y-iH-d1M"/>
+                        <constraint firstItem="xqR-ol-XtQ" firstAttribute="top" secondItem="FML-ZA-pV3" secondAttribute="bottom" constant="10" id="JkP-Dt-aJK"/>
+                        <constraint firstAttribute="width" constant="251" id="KB3-md-KJq"/>
+                        <constraint firstAttribute="bottom" secondItem="ouV-tl-zy6" secondAttribute="bottom" constant="10" id="M07-cc-UXx"/>
+                        <constraint firstItem="FML-ZA-pV3" firstAttribute="centerX" secondItem="M6C-ki-axH" secondAttribute="centerX" id="Wem-Sp-9WL"/>
+                        <constraint firstAttribute="height" constant="215" id="XVf-ST-fZo"/>
+                        <constraint firstItem="Ykc-09-Bei" firstAttribute="top" secondItem="M6C-ki-axH" secondAttribute="top" constant="10" id="a90-pU-LgZ"/>
+                        <constraint firstItem="pLy-FJ-zA5" firstAttribute="top" secondItem="OaX-XX-xnY" secondAttribute="bottom" constant="16" id="ddp-me-3dV"/>
+                        <constraint firstAttribute="trailing" secondItem="xqR-ol-XtQ" secondAttribute="trailing" constant="20" id="g9d-BA-4Wz"/>
+                        <constraint firstItem="Ykc-09-Bei" firstAttribute="leading" secondItem="M6C-ki-axH" secondAttribute="leading" constant="10" id="mM1-hn-X3s"/>
+                        <constraint firstAttribute="bottom" secondItem="pLy-FJ-zA5" secondAttribute="bottom" constant="10" id="wmY-l7-UhS"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="M6C-ki-axH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WO3-ca-1r3"/>
+                <constraint firstItem="M6C-ki-axH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dBM-7Y-qkL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.72826086956523"/>
+        </view>
+    </objects>
+</document>
